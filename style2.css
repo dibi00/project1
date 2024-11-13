@@ -1,0 +1,492 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+@font-face {
+    font-family: 'Ownglyph_meetme-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/Ownglyph_meetme-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'Ownglyph_meetme-Rg', sans-serif; 
+    letter-spacing: 2px;
+}
+
+nav {
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.navi {
+    width: 1300px;
+    /* border: 1px solid rgb(255, 208, 0); */
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    color: rgb(116, 116, 116);
+    font-size: 24px;
+    margin-left: 65px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333333;
+}
+
+nav + * {
+    margin-top: 60px;
+}
+
+.navi ul li:first-child {
+    margin-left: 40px;
+    margin-right: 0px;
+}
+
+nav ul li a:hover {
+    color: rgb(255,147, 41);
+    font-size: 26px;
+}
+
+.hidden {
+    display: none;
+}
+/* 검색창 초기 상태 */
+.search-bar {
+    display: none; /* 기본적으로 숨김 */
+    width: 120%;
+    max-width: 541px; /* 검색창 최대 너비 설정 */
+    padding: 10px;
+    box-sizing: border-box; /* padding 포함하여 너비 계산 */
+    margin-left: 40px; /* 왼쪽 정렬 */
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.show-search-bar .search-bar {
+    display: list-item; /* li와 같은 블록 레벨 요소로 표시 */
+    flex-grow: 1; /* 가능한 공간을 모두 채움 */
+}
+
+/* 검색 버튼 클릭 시 nav 항목 숨기기 */
+.nav-list.hidden .nav-item {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s ease-in-out;
+}
+
+/* 검색 버튼 클릭 시 검색창 표시 */
+.nav-list.hidden + .search-bar {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    font-size: 20px;
+    color: rgb(116, 116, 116);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.container {
+    background-color: #fffbf0;
+    height: 1250px;
+    padding-top: 160px;
+}
+
+.category_h1 {
+    color: #333333;
+    font-size: 30px;
+    width: 1300px;
+    margin: 0 auto 5px;
+}
+
+.category img {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.ul1, .ul2 {
+    list-style: none;
+    padding: 0;
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.ul1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ul1 li, .ul2 li {
+    text-align: center;
+    border: 1.3px solid rgb(255, 206, 157);
+    background-color: #fff;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.ul1 li {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.ul1 a, .ul2 a {
+    display: block;
+    padding: 10px;
+    color: rgb(255, 147, 41);
+    text-decoration: none;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ul2 {
+    display: flex;
+    margin-top: 10px;
+}
+
+.ul2 li {
+    margin-right: 10px;
+}
+
+.ul2 a {
+    padding: 10px 30px;
+}
+
+.ul1 li:hover, .ul2 li:hover {
+    background-color: rgb(255, 147, 41); 
+}
+
+.ul1 li:hover a, .ul2 li:hover a {
+    color: #ffffff; 
+}
+
+
+
+
+.container2 {
+    display: flex;
+    flex-direction: column; /* 요소들을 세로로 정렬 */
+    align-items: center; /* 요소들을 중앙 정렬 */
+    justify-content: center; /* 수직 방향으로 중앙 정렬 */
+}
+
+.main3{
+    background-color: #fffbf0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+
+.best h1{
+    font-weight: bold;
+}
+.best_p {
+    position: relative;
+    height: 300px;
+    background-image: url(images/best_banner.png);
+    font-size: 130%;
+}
+.best_p h1 {
+    color:#333333;
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    margin-left: 70px;
+}
+
+
+.best_p h3{
+    font-size: 20px;
+    font-weight: normal;
+    color:  rgb(255,147, 41);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 70px;
+}
+
+.best_img1{
+    display: flex;
+    width: 1300px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.best_img2{
+    display: flex;
+    width: 100%; /* 부모의 전체 너비 사용 */
+    justify-content: center; /* 내부 요소 중앙 정렬 */
+    margin-top: 50px; /* main3와의 간격 */
+}
+
+section.best{
+    float: left;
+}
+
+.hover_area{
+    position: relative;
+    margin-right: 20px;
+}
+
+.hover_area img{
+    width: 310px;
+    height: 310px;
+    border-radius: 20px;
+}
+
+.hover_area .caption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 310px;
+    height: 310px;
+    background-color: rgba(50, 50, 50, 0.5);
+    transition: 0.6s;
+    opacity: 0;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hover_area .caption h1{
+    font-weight: normal;
+    margin: 0; 
+}
+
+.hover_area .caption h3{
+    color: #fff;
+    font-weight: normal;
+    margin: 0; 
+    line-height: 30px;
+    padding-top: 10px; 
+}
+
+.hover_area .caption a{
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.hover_area:hover .caption{
+    opacity: 1;
+}
+
+
+
+.description h4 {
+    font-weight: normal;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: rgb(255, 147, 41);
+}
+
+.description {
+    display: flex;
+    flex-direction: column; /* 상하 정렬, 필요에 따라 변경 가능 */
+    align-items: flex-start; /* 기본적으로 왼쪽 정렬 */
+}
+
+.info {
+    display: flex;
+    align-items: center; /* 수평 정렬 */
+}
+
+.info h2 {
+    margin: 0; /* 기본 마진 제거 */
+    margin-left: 10px; /* h2와 p 사이 간격 조절 */
+    font-weight: normal;
+    color: #333333;
+}
+
+.info2 h2{
+    font-weight: normal;
+    color: #333333;
+}
+
+.description p {
+    color: #686868;
+    margin-top: -5px;
+}
+
+.plus{
+    width: 55px;
+    margin-top: -80px;
+    margin-left: 250px;
+}
+
+.plus img {
+    transition: transform 0.5s ease;
+}
+
+.plus img:hover {
+    transform: scale(1.2) rotate(180deg); 
+}
+
+
+
+
+
+.best_img2{
+    display: flex;
+    width: 1300px;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+
+
+
+hr {
+    height: 0.5px;
+    border: none;
+    background-color: #ffffff;
+}
+
+
+.footer {
+    font-size: 18px;
+    background-color: rgb(255, 147, 41);
+    height: 240px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+    position: relative;
+}
+
+
+.footer1, .footer2, .footer3, .logo {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+
+.footer1 {
+    text-align: center;
+    color: #fff;
+    height: 50px;
+    position: relative;
+    top: 20px;
+}
+
+
+.footer1 a {
+    margin-right: 150px;
+}
+
+
+.footer li {
+    list-style: none;
+}
+
+
+.footer2 {
+    text-align: center;
+    color: #fff;
+}
+
+
+.logo {
+    width: 160px;
+    display: inline-block;
+}
+
+
+.footer3 li {
+    margin-right: 5px;
+}
+
+
+.footer3 ul li {
+    float: right;
+}
+
+
+.footer3 img {
+    width: 90%;
+}
+
+
+.footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.footer3 {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: -15px;
+}
+
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

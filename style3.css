@@ -1,0 +1,372 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+@font-face {
+    font-family: 'Ownglyph_meetme-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/Ownglyph_meetme-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Ownglyph_meetme-Rg', sans-serif;
+    letter-spacing: 2px;
+}
+
+nav {
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.navi {
+    width: 1300px;
+    /* border: 1px solid rgb(255, 208, 0); */
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    color: rgb(116, 116, 116);
+    font-size: 24px;
+    margin-left: 65px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333333;
+}
+
+nav + * {
+    margin-top: 60px;
+}
+
+.navi ul li:first-child {
+    margin-left: 40px;
+    margin-right: 0px;
+}
+
+nav ul li a:hover {
+    color: rgb(255,147, 41);
+    font-size: 26px;
+}
+
+.hidden {
+    display: none;
+}
+/* 검색창 초기 상태 */
+.search-bar {
+    display: none; /* 기본적으로 숨김 */
+    width: 120%;
+    max-width: 541px; /* 검색창 최대 너비 설정 */
+    padding: 10px;
+    box-sizing: border-box; /* padding 포함하여 너비 계산 */
+    margin-left: 40px; /* 왼쪽 정렬 */
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.show-search-bar .search-bar {
+    display: list-item; /* li와 같은 블록 레벨 요소로 표시 */
+    flex-grow: 1; /* 가능한 공간을 모두 채움 */
+}
+
+/* 검색 버튼 클릭 시 nav 항목 숨기기 */
+.nav-list.hidden .nav-item {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s ease-in-out;
+}
+
+/* 검색 버튼 클릭 시 검색창 표시 */
+.nav-list.hidden + .search-bar {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    font-size: 20px;
+    color: rgb(116, 116, 116);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+.main {
+    width: 100%;
+    height: 70vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    padding-top: 120px;
+    margin-top: 0px;
+    opacity: 0; /* initially set opacity to 0 */
+    animation: slideUp 1.3s forwards; /* apply animation */
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0; /* starting opacity */
+        transform: translateY(15%); /* starting position */
+    }
+    100% {
+        opacity: 1; /* ending opacity */
+        transform: translateY(0); /* ending position */
+    }
+}
+
+.info{
+    width: 1300px;
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+/* .main img {
+    max-width: 100%; 
+    max-height: 100%;
+    width: 450px;
+} */
+
+
+.displayedImage {
+    max-width: 100%; 
+    max-height: 100%;
+    width: 450px;
+    height: auto;
+}
+
+.thumbnail {
+    width: 100px; /* displayedImage의 크기의 절반으로 설정 */
+    height: auto;
+    cursor: pointer; /* 선택 시 포인터 모양으로 변경 (선택사항) */
+}
+
+
+.info h1{
+    color: #333333;
+}
+
+.p h3{
+    margin-top: -60px;
+    font-weight: normal;
+    color: #fff;
+    width: 56px;
+    padding: 5px 10px;
+    background-color: rgb(145, 145, 145);
+}
+
+.p {
+    position: relative; 
+    top: -500px; 
+    margin-left: 500px;
+}
+.p h4{
+    margin-top: -10px;
+    color: #7d7d7d;
+    font-weight: normal;
+}
+
+.li1 {
+    position: relative;
+    top: -510px;
+    display: flex;
+    width: 730px;
+    margin-left: 460px;
+}
+
+.li1 li {
+    color: #fff;
+    font-size: 18px;
+    width: 182px;
+    height: 40px;
+    background-color: rgb(255, 147, 41);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    list-style: none;
+    margin-right: 3px;
+}
+
+.li1 a{
+    text-decoration: none;
+}
+
+table {
+    margin-top: 20px;
+    width: 737px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    align-self: center; 
+    margin-left: 500px;
+    margin-top: -527px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+}
+
+td:nth-child(odd) {
+    color: #333333;
+    background-color: #ededed; 
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+}
+
+td:nth-child(even) {
+    background-color: #ffffff; 
+    font-weight: normal;
+    color: #7d7d7d;
+}
+
+
+
+
+
+hr {
+    height: 0.5px;
+    border: none;
+    background-color: #ffffff;
+}
+
+
+.footer {
+    font-size: 18px;
+    background-color: rgb(255, 147, 41);
+    height: 240px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+    position: relative;
+}
+
+
+.footer1, .footer2, .footer3, .logo {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+
+.footer1 {
+    text-align: center;
+    color: #fff;
+    height: 50px;
+    position: relative;
+    top: 20px;
+}
+
+
+.footer1 a {
+    margin-right: 150px;
+}
+
+
+.footer li {
+    list-style: none;
+}
+
+
+.footer2 {
+    text-align: center;
+    color: #fff;
+}
+
+
+.logo {
+    width: 160px;
+    display: inline-block;
+}
+
+
+.footer3 li {
+    margin-right: 5px;
+}
+
+
+.footer3 ul li {
+    float: right;
+}
+
+
+.footer3 img {
+    width: 90%;
+}
+
+
+.footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.footer3 {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: -15px;
+}
+
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

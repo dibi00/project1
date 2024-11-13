@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상세페이지</title>
+    <link rel="stylesheet" href="style3.css">
+    <style>
+        @font-face {
+    font-family: 'Ownglyph_meetme-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/Ownglyph_meetme-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navi">
+            <ul class="nav-list">
+                <li><a href="index.html"><img src="images/logo_kids.png" alt=""></a></li>
+                <li class="dropdown">
+                    <a href="#"><img src="images/menu.png" alt=""></a>
+                    <div class="dropdown-content">
+                        <a href="index2.html">전체</a>
+                        <a href="index2.html">과일</a>
+                        <a href="index2.html">채소</a>
+                        <a href="index2.html">주잡곡/우리밀</a>
+                        <a href="index2.html">반찬류</a>
+                        <a href="index2.html">양념류</a>
+                        <a href="index2.html">축산</a>
+                        <a href="index2.html">수산</a>
+                        <a href="index2.html">면 우리밀가공식품</a>
+                        <a href="index2.html">커피/음료/유제품/차</a>
+                        <a href="index2.html">우리밀베이커리</a>
+                        <a href="index2.html">간식/식사대용</a>
+                        <a href="index2.html">건강식품</a>
+                        <a href="index2.html">생활용품</a>
+                        <a href="index2.html">대용량상품</a>
+                        <a href="index2.html">비건상품</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="index.html">회사소개</a></li>
+                <li class="nav-item"><a href="index.html">자연드림이야기</a></li>
+                <li class="nav-item"><a href="index.html">베스트</a></li>
+                <li class="nav-item"><a href="index.html">고객센터</a></li>
+                <div class="search-bar">
+                    <input type="text" placeholder="검색어를 입력하세요">
+                </div>
+                <li class="search-trigger"><a href="#"><img src="images/icon.png" alt=""></a></li>
+                <li class=""><a href="https://www.icoop.or.kr/coopmall/"><img src="images/logo.png" alt=""></a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <script>
+document.querySelector('.search-trigger').addEventListener('click', function(event) {
+    event.preventDefault(); // 기본 링크 동작 막기
+
+    const navItems = document.querySelectorAll('.nav-item');
+    const searchBar = document.querySelector('.search-bar');
+
+    // 상태를 토글할 변수
+    const isHidden = navItems[0].classList.contains('hidden');
+
+    if (isHidden) {
+        // nav-item이 숨겨져 있는 상태일 때
+        navItems.forEach(item => item.classList.remove('hidden')); // nav-item 보이게 하기
+        searchBar.style.display = 'none'; // 검색창 숨기기
+    } else {
+        // nav-item이 보이는 상태일 때
+        navItems.forEach(item => item.classList.add('hidden')); // nav-item 숨기기
+        searchBar.style.display = 'list-item'; // 검색창 보이게 하기
+    }
+});
+    </script>
+
+
+
+    <div class="main">
+        <div class="info">
+            <div class="imgContainer">
+                <img class="displayedImage" src="images/best1.jpg" alt="Displayed Image">
+            </div>
+            <div>
+                <img class="thumbnail" src="images/best1.jpg" alt="Thumbnail 1" data-title="Title 1" data-description="Description 1">
+                <img class="thumbnail" src="images/best1_2.jpg" alt="Thumbnail 2" data-title="Title 2" data-description="Description 2">
+            </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    // displayedImage, title, description 요소를 가져옵니다.
+    const displayedImage = document.querySelector('.displayedImage');
+    const title = document.getElementById('title');
+    const description = document.getElementById('description');
+
+    // 모든 thumbnail 요소를 가져옵니다.
+    const thumbnails = document.querySelectorAll('.thumbnail');
+
+    // 각 thumbnail 요소에 클릭 이벤트 리스너를 추가합니다.
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', function() {
+            // 클릭된 썸네일 이미지의 src를 displayedImage의 src로 설정합니다.
+            displayedImage.src = this.src;
+            // 클릭된 썸네일의 data-title을 title 요소의 텍스트로 설정합니다.
+            title.textContent = this.getAttribute('data-title');
+            // 클릭된 썸네일의 data-description을 description 요소의 텍스트로 설정합니다.
+            description.textContent = this.getAttribute('data-description');
+        });
+    });
+});
+
+</script>
+
+            <div class="p">
+                <h3>햄어묵류</h3>
+                <h1>김밥용맛살</h1>
+                <h4>글루텐 0% 밀가루에서 글루텐을 줄인 소맥전분이나 대체 원재료로 만든 글루텐프리 식품입니다.</h4>
+            </div>
+            <ul class="li1">
+                <a href=""><li>상품이미지</li></a>
+                <a href=""><li>상품정보</li></a>
+                <a href=""><li>반품기준</li></a>
+                <a href=""><li>방사능 검사현황</li></a>
+            </ul>
+
+            <table>
+                <tr>
+                    <td>공급시기</td>
+                    <td>상시공급</td>
+                </tr>
+                <tr>
+                    <td>식품유형</td>
+                    <td>어묵</td>
+                </tr>
+                <tr>
+                    <td>생산기</td>
+                    <td>주식회사 정어묵 / 충북 괴산군 칠성면 자연드림3길 35</td>
+                </tr>
+                <tr>
+                    <td>원부재료</td>
+                    <td>명태연육(미국산/어육, 폴리인산나트륨,D-소비톨, 설탕)74.60%, 감자전분(감자/국산), 게엑기스[게추출물(게:국산), 천일염(국산)], 복합해물추출액 (천일염, 멸치, 게, 바지락살, 굴, 설탕, 건표고버섯, 건다시마/국산), 붉은대게살</td>
+                </tr>
+                <tr>
+                    <td>중량설명</td>
+                    <td>160g</td>
+                </tr>
+                <tr>
+                    <td>포장재질</td>
+                    <td>PE</td>
+                </tr>
+                <tr>
+                    <td>소비기한</td>
+                    <td>별도 표기일까지</td>
+                </tr>
+                <tr>
+                    <td>보관방법</td>
+                    <td>냉장 / 개봉 후에는 변질우려가 있으니, 가급적 빨리 드시기 바랍니다.</td>
+                </tr>
+                </table>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="footer">
+        <div class="footer1">
+            <a href="">회사소개</a>
+            <a href="">이용약관</a>
+            <a href="">개인정보처리방침</a>
+        </div>
+    
+        <hr>
+    
+        <div class="footer2">
+            <p>자연드림키즈푸드 ㅣ 경기도 수원시 영통구 영통로 145, 
+                2층(망포동, ICOOP수원영통센터) / 대표자 : 김민재 ㅣ 전화문의 1577-6009
+            </p>
+            <p>Copyright ⓒ 2021 자연드림키즈푸드 All rights reserved</p>
+        </div>
+    
+        <div class="logo">
+            <li><a href=""><img src="images/logo_white.png" alt=""></a></li>
+        </div>
+        
+        <div class="footer3">
+            <ul>
+                <li><a href="https://www.instagram.com/naturaldream62/"><img src="images/sns_01.png" alt=""></a></li>
+                <li><a href="https://www.facebook.com/naturaldream62"><img src="images/sns_02.png" alt=""></a></li>
+                <li><a href="https://blog.naver.com/icoopkorea"><img src="images/sns_03.png" alt=""></a></li>
+                <li><a href="https://www.youtube.com/channel/UCAcSJWSGz_oeIdKFNn8tI2g"><img src="images/sns_04.png" alt=""></a></li>
+            </ul>
+        </div>
+    
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const footerElements = document.querySelectorAll('.footer1, .footer2, .logo, .footer3');
+            const observerOptions = {
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+    
+            footerElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+    
+
+</body>
+</html>

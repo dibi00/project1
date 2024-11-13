@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자연드림키즈푸드</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @font-face {
+    font-family: 'Ownglyph_meetme-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/Ownglyph_meetme-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="navi">
+            <ul class="nav-list">
+                <li><a href="index.html"><img src="images/logo_kids.png" alt=""></a></li>
+                <li class="dropdown">
+                    <a href="#"><img src="images/menu.png" alt=""></a>
+                    <div class="dropdown-content">
+                        <a href="index2.html">전체</a>
+                        <a href="index2.html">과일</a>
+                        <a href="index2.html">채소</a>
+                        <a href="index2.html">주잡곡/우리밀</a>
+                        <a href="index2.html">반찬류</a>
+                        <a href="index2.html">양념류</a>
+                        <a href="index2.html">축산</a>
+                        <a href="index2.html">수산</a>
+                        <a href="index2.html">면 우리밀가공식품</a>
+                        <a href="index2.html">커피/음료/유제품/차</a>
+                        <a href="index2.html">우리밀베이커리</a>
+                        <a href="index2.html">간식/식사대용</a>
+                        <a href="index2.html">건강식품</a>
+                        <a href="index2.html">생활용품</a>
+                        <a href="index2.html">대용량상품</a>
+                        <a href="index2.html">비건상품</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="index.html">회사소개</a></li>
+                <li class="nav-item"><a href="index.html">자연드림이야기</a></li>
+                <li class="nav-item"><a href="index.html">베스트</a></li>
+                <li class="nav-item"><a href="index.html">고객센터</a></li>
+                <div class="search-bar">
+                    <input type="text" placeholder="검색어를 입력하세요">
+                </div>
+                <li class="search-trigger"><a href="#"><img src="images/icon.png" alt=""></a></li>
+                <li class=""><a href="https://www.icoop.or.kr/coopmall/"><img src="images/logo.png" alt=""></a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <script>
+document.querySelector('.search-trigger').addEventListener('click', function(event) {
+    event.preventDefault(); // 기본 링크 동작 막기
+
+    const navItems = document.querySelectorAll('.nav-item');
+    const searchBar = document.querySelector('.search-bar');
+
+    // 상태를 토글할 변수
+    const isHidden = navItems[0].classList.contains('hidden');
+
+    if (isHidden) {
+        // nav-item이 숨겨져 있는 상태일 때
+        navItems.forEach(item => item.classList.remove('hidden')); // nav-item 보이게 하기
+        searchBar.style.display = 'none'; // 검색창 숨기기
+    } else {
+        // nav-item이 보이는 상태일 때
+        navItems.forEach(item => item.classList.add('hidden')); // nav-item 숨기기
+        searchBar.style.display = 'list-item'; // 검색창 보이게 하기
+    }
+});
+    </script>
+
+    <div class="main">
+        <ul class="main_left">
+            <li><a href=""><img src="images/medal_img1.png" alt=""></a></li>
+            <li><a href=""><img src="images/medal_img2.png" alt=""></a></li>
+            <li><a href=""><img src="images/medal_img3.png" alt=""></a></li>
+            <li><a href=""><img src="images/medal_img4.png" alt=""></a></li>
+            <li><a href=""><img src="images/medal_img5.png" alt=""></a></li>
+            <li><a href=""><img src="images/medal_img6.png" alt=""></a></li>
+        </ul>
+
+        <div class="main_h1">
+            <h1><span>자연드림 키즈푸드</span>는</h1>
+            <h1>보다 <span>좋은 식품</span>을 전합니다.</h1>
+        </div>
+
+        <ul class="main_right">
+            <li><a href=""><img src="images/medal_img7.png" alt=""></a></li>
+            <li><a href=""><img src="images/medal_img8.png" alt=""></a></li>
+            <li><a href=""><img src="images/medal_img9.png" alt=""></a></li>
+            <li><a href=""><img src="images/medal_img10.png" alt=""></a></li>
+            <li><a href=""><img src="images/medal_img11.png" alt=""></a></li>
+            <li><a href=""><img src="images/medal_img12.png" alt=""></a></li>
+            <li><a href=""><img src="images/medal_img13.png" alt=""></a></li>
+        </ul>
+        <div class="overlay"></div>
+
+    </div>
+
+
+    <div class="main2">
+        <div class="story">
+            <div class="story_p">
+                <h1>자연드림이야기</h1>
+                <h3>자연드림의 다양하고 새로운 뉴스를 알립니다.</h3>
+            </div>
+
+            <div class="card">
+                <div class="card1">
+                    <div class="img_container">
+                        <img class="image" src="images/story1.jpeg" alt="">
+                    </div>
+                    <p>암을 예방할 수 있는 식품은 어떤 것이 있을까요?</p>
+                    <li><a><h1>자세히보기</h1></a></li>
+                </div>
+
+                <div class="card2">
+                    <div class="img_container">
+                        <img class="image" src="images/story2.jpeg" alt="">
+                    </div>
+                    <p>자연드림에서 힐링하며 여름을 만끽하세요.</p>
+                    <li><a><h1>자세히보기</h1></a></li>
+                </div>
+
+                <div class="card3">
+                    <div class="img_container">
+                        <img class="image" src="images/story3.jpeg" alt="">
+                    </div>
+                    <p>건강과 힐링 듬뿍! 우리집 힐링밥상 레시피 기획전!</p>
+                    <li><a><h1>자세히보기</h1></a></li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const elementsToObserve = document.querySelectorAll('.story_p, .card1, .card2, .card3');
+    const observerOptions = {
+        threshold: 0.2
+    };
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, index * 300); // 각 요소가 순서대로 나타나도록 지연 시간을 설정
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    elementsToObserve.forEach(element => {
+        observer.observe(element);
+    });
+});
+    </script>
+
+    <div class="main3">
+        <div class="best">
+            <div class="best_p">
+                <h1><span>치유</span>와 <span>힐링</span>을 위한 베스트 상품</h1>
+                <h3>자연드림에서 가장 잘 나가는 상품들을 만나보세요.</h3>
+                <img class="img_arrow" src="images/arrow.png" alt="">
+            </div>
+
+            <script>
+                const bestPImages = [
+                    'images/best_banner.png',
+                    'images/best_banner2.png',
+                    'images/best_banner3.png'
+                ];
+                
+                let bestPCurrentIndex = 0;
+                
+                function changeBestPBackgroundImage() {
+                    const bestPDiv = document.querySelector('.best_p');
+                    bestPDiv.style.backgroundImage = `url(${bestPImages[bestPCurrentIndex]})`;
+                    bestPCurrentIndex = (bestPCurrentIndex + 1) % bestPImages.length;
+                }
+                
+                // Initialize the first image
+                changeBestPBackgroundImage();
+                
+                // Change the background image every 2 seconds
+                setInterval(changeBestPBackgroundImage, 2000);
+                
+                // Add click event to navigate to index2.html
+                document.querySelector('.best_p').addEventListener('click', function() {
+                    window.location.href = 'index2.html';
+                });
+                
+                </script>
+            
+            <div class="best_img">
+                <section class="best">
+                    <div class="hover_area">
+                        <a href="index3.html"><img src="images/best1.jpg" alt=""></a>
+                        <div class="caption">
+                            <h1><a href="">글루텐 0%</a></h1>
+                            <h3>
+                                <span>밀가루에서 글루텐을 줄인 소맥전분이나 대체 원재료로 만든
+                                    글루텐프리 식품입니다.</span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="description">
+                        <div class="info">
+                            <h4>Best</h4>
+                            <h2>김밥용 맛살 160g</h2>
+                        </div>
+                        <p>#햄/어묵류</p>
+                    </div>
+                    <div class="plus">
+                        <a href="index3.html"><img src="images/+.png" alt=""></a>
+                    </div>
+                </section>
+
+                <section class="best">
+                    <div class="hover_area">
+                        <a href="index3.html"><img src="images/best2.jpg" alt=""></a>
+                        <div class="caption">
+                            <h1><a href="">심층수 사용</a></h1>
+                            <h3>
+                                <span>수돗물이 아닙니다. 먹는 해양심층수 기픈물로 자연드림만의 프리미엄식품을 만듭니다.</span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="description">
+                        <div class="info">
+                            <h4>Best</h4>
+                            <h2>당근사과젤리</h2>
+                        </div>
+                        <p>#기타간식</p>
+                    </div>
+                    <div class="plus">
+                        <a href="index3.html"><img src="images/+.png" alt=""></a>
+                    </div>
+                </section>
+
+                <section class="best">
+                    <div class="hover_area">
+                        <a href="index3.html"><img src="images/best3.jpg" alt=""></a>
+                        <div class="caption">
+                            <h1><a href="">글루텐 0%</a></h1>
+                            <h3>
+                                <span>밀가루에서 글루텐을 줄인 소맥전분이나 대체 원재료로 만든
+                                    글루텐프리 식품입니다.</span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="description">
+                        <div class="info">
+                            <h4>Best</h4>
+                            <h2>김밥용 어묵</h2>
+                        </div>
+                        <p>#햄/어묵류</p>
+                    </div>                    
+                    <div class="plus">
+                        <a href="index3.html"><img src="images/+.png" alt=""></a>
+                    </div>
+                </section>
+
+                <section class="best">
+                    <div class="hover_area">
+                        <a href="index3.html"><img src="images/best4.jpg" alt=""></a>
+                        <div class="caption">
+                            <h1><a href="">깊은바다소금</a></h1>
+                            <h3>
+                                <span>가공식품에 사용하는 소금까지 해양심층수로 만든 깊은바다소금으로 바꿔 식품의 기본을 튼튼히 합니다.</span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="description">
+                        <div class="info">
+                            <h4>Best</h4>
+                            <h2>찰순대(냉장)</h2>
+                        </div>
+                        <p>#즉석조리식품</p>
+                    </div>
+                    <div class="plus">
+                        <a href="index3.html"><img src="images/+.png" alt=""></a>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <div class="main4">
+        <div class="main4_p">
+            <div class="logo_purple"><img src="images/logo_purple.png" alt=""></div>
+            <h1>"I am What I eat"</h1>
+            <h1>내가 먹는 것이 나를 만든다</h1>
+            <h2>올 한 해도 자연드림과 건강한 나를 만들어가요</h2>
+            <div class="AIchat"><p>고객상담 AI챗봇 →</p></div>
+        </div>
+        <!-- <div class="back"><img src="images/4.png" alt=""> -->
+        </div>
+    </div>
+
+    <script>
+        // Add the visible class after a delay
+        setTimeout(() => {
+            document.querySelector('.main4_p').classList.add('visible');
+        }, 100); // Adjust the delay as needed
+    </script>
+
+    <div class="footer">
+        <div class="footer1">
+            <a href="">회사소개</a>
+            <a href="">이용약관</a>
+            <a href="">개인정보처리방침</a>
+        </div>
+
+        <hr>
+
+        <div class="footer2">
+            <p>자연드림키즈푸드 ㅣ 경기도 수원시 영통구 영통로 145, 
+                2층(망포동, ICOOP수원영통센터) / 대표자 : 김민재 ㅣ 전화문의 1577-6009
+            </p>
+            <p>Copyright ⓒ 2021 자연드림키즈푸드 All rights reserved</p>
+        </div>
+
+        <div class="logo">
+            <li><a href=""><img src="images/logo_white.png" alt=""></a></li>
+        </div>
+        
+        <div class="footer3">
+            <ul>
+                <li><a href="https://www.instagram.com/naturaldream62/"><img src="images/sns_01.png" alt=""></a></li>
+                <li><a href="https://www.facebook.com/naturaldream62"><img src="images/sns_02.png" alt=""></a></li>
+                <li><a href="https://blog.naver.com/icoopkorea"><img src="images/sns_03.png" alt=""></a></li>
+                <li><a href="https://www.youtube.com/channel/UCAcSJWSGz_oeIdKFNn8tI2g"><img src="images/sns_04.png" alt=""></a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const footerElements = document.querySelectorAll('.footer1, .footer2, .logo, .footer3');
+            const observerOptions = {
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            footerElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const navItems = document.querySelectorAll('.navi ul li');
+        
+            navItems.forEach(item => {
+                item.addEventListener("click", function(event) {
+                    event.preventDefault();
+        
+                    switch (item.textContent.trim()) {
+                        case '회사소개':
+                            scrollToSection('.main');
+                            break;
+                        case '자연드림이야기':
+                            scrollToSection('.main2');
+                            break;
+                        case '베스트':
+                            scrollToSection('.main3');
+                            break;
+                        case '고객센터':
+                            scrollToSection('.main4');
+                            break;
+                        default:
+                            break;
+                    }
+                });
+            });
+        
+            function scrollToSection(selector) {
+                const section = document.querySelector(selector);
+                if (section) {
+                    const topOffset = section.offsetTop - document.querySelector('nav').offsetHeight;
+                    window.scrollTo({ top: topOffset, behavior: "smooth" });
+                }
+            }
+        });
+        </script>
+
+
+
+</body>
+</html>
